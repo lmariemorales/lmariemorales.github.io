@@ -64,6 +64,7 @@ body {
 .hero-title {
   text-align: center;
   font-size: 3rem;
+  text-shadow: 0 0 10px rgba(216, 167, 255, 0.4);
   margin: 0;
 }
 
