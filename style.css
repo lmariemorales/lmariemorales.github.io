@@ -1,8 +1,8 @@
 :root {
-  --bg: #1a1026;
-  --bg-accent: #3b1f4f;
-  --text: #f6edf7;
-  --link: #d8a7ff;
+  --bg: #845A62;
+  --bg-accent: #845A62;
+  --text: #845A62;
+  --link: ##845A62;
   --box: rgba(0, 0, 0, 0.55);
   --border: rgba(255, 255, 255, 0.18);
 }
@@ -13,16 +13,33 @@ body {
   font-family: Georgia, serif;
   color: var(--text);
 
-  background:
-    radial-gradient(circle at top left, var(--bg-accent), transparent 35%),
-    radial-gradient(circle at bottom right, #2b4a3f, transparent 30%),
-    var(--bg);
+  background-image:
+    linear-gradient(rgba(18,10,26,0.45), rgba(18,10,26,0.65)),
+    url("assets/ppurpleclouds.jpg"),        /* full background */
+    url("assets/nebs_clouds.jpg");        /* right-side image */
+
+  background-size:
+    contain,
+    contain,
+    contain;
+
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    no-repeat;
+
+  background-position:
+    left center,
+    left center,
+    right center;
+
+  background-color: black;
 }
 
 .page {
-  width: min(850px, 90%);
+  width: min(700px, 90%);
   margin: 0 auto;
-  padding: 4rem 0;
+  padding: 1.5rem 0;
 }
 
 .glass-box {
@@ -32,6 +49,38 @@ body {
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   backdrop-filter: blur(8px);
+}
+
+.hero {
+  min-height: 300px;              /* makes it bigger */
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;        /* vertical centering */
+  gap: 2rem;
+}
+
+.hero-title {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hero-img img {
+  width: 200px;
+  border-radius: 12px;
+}
+.hero-text {
+  max-width: 500px;
+  text-align: right;
 }
 
 a {
